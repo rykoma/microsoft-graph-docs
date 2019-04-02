@@ -1,0 +1,14 @@
+
+```CS
+
+GraphServiceClient graphClient = new GraphServiceClient( authProvider );
+
+//create String list and populate it
+var groupIds = new List<String>();
+
+await graphClient.DirectoryObjects["{id}"]
+	.checkMemberGroups(groupIds);
+	.Request()
+	.PostAsync()
+
+```
