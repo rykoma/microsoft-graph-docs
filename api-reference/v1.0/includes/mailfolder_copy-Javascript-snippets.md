@@ -1,0 +1,24 @@
+
+```Javascript
+
+const options = {
+	authProvider,
+};
+
+//initialise the client
+const client = Client.init(options);
+
+const copy = {
+  destinationId: "destinationId-value"
+};
+
+//make the request to Graph
+try{
+	let res = await client.api('/me/mailFolders/{id}/copy')
+		.post({String : copy});
+	console.log(res);
+} catch (error) {
+	throw error;
+}
+
+```

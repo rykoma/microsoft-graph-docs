@@ -1,0 +1,25 @@
+
+```CS
+
+GraphServiceClient graphClient = new GraphServiceClient( authProvider );
+
+//create instance of EducationItemBody
+var instructions = new EducationItemBody
+{
+	ContentType = "Text",
+	Content = "Read chapters 1 through 3",
+};
+
+//create instance of EducationAssignment
+var assignments = new EducationAssignment
+{
+	DisplayName = "Week 1 reading assignment",
+	Instructions = instructions,
+	DueDateTime = "2014-02-01T00:00:00Z",
+};
+
+await graphClient.Education.Classes["11021"].Assignments["19002"]
+	.Request()
+	.UpdateAsync(assignments);
+
+```

@@ -1,0 +1,50 @@
+
+```Javascript
+
+const options = {
+	authProvider,
+};
+
+//initialise the client
+const client = Client.init(options);
+
+const conversations = {
+  Topic: "Does anyone have a second?",
+  Threads: [
+    {
+      Posts: [
+        {
+          Body: {
+            ContentType: "HTML",
+            Content: "This is urgent!"
+          },
+          Extensions: [
+            {
+              @odata.type: "Microsoft.OutlookServices.OpenTypeExtension",
+              extensionName: "Com.Contoso.Benefits",
+              companyName: "Contoso",
+              expirationDate: "2016-08-03T11:00:00.000Z",
+              topPicks: [
+                "Employees only",
+                "Add spouse or guest",
+                "Add family"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+//make the request to Graph
+try{
+	let res = await client.api('/groups('37df2ff0-0de0-4c33-8aee-75289364aef6')/conversations')
+		.version('beta')
+		.post({conversation : conversations});
+	console.log(res);
+} catch (error) {
+	throw error;
+}
+
+```

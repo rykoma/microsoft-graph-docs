@@ -1,0 +1,227 @@
+
+```CS
+
+GraphServiceClient graphClient = new GraphServiceClient( authProvider );
+
+var expression = "Replace([preferredLanguage], "-", , , "_", ,  )";
+
+
+//create Properties list and populate it
+var value = new List<Properties>();
+
+var valueVar@odata.type = "#Collection(String)";
+
+var key = "appRoleAssignments";
+
+var valueVar = "johns@contoso.com";
+
+var keyVar = "userPrincipalName";
+
+var valueVarVar = "425-555-0011";
+
+var keyVarVar = "telephoneNumber";
+
+var valueVarVarVar = "Smith";
+
+var keyVarVarVar = "surname";
+
+var valueVarVarVarVar = "";
+
+var keyVarVarVarVar = "proxyAddresses";
+
+var valueVarVarVarVarVar = "EN-US";
+
+var keyVarVarVarVarVar = "preferredLanguage";
+
+var valueVarVarVarVarVarVar = "Main Office";
+
+var keyVarVarVarVarVarVar = "physicalDeliveryOfficeName";
+
+var valueVarVarVarVarVarVarVar = "";
+
+var keyVarVarVarVarVarVarVar = "passwordProfile.password";
+
+var valueVarVarVarVarVarVarVarVar = "66E4A8CC-1B7B-435E-95F8-F06CEA133828";
+
+var keyVarVarVarVarVarVarVarVar = "onPremisesSecurityIdentifier";
+
+var valueVarVarVarVarVarVarVarVarVar = "425-555-0010";
+
+var keyVarVarVarVarVarVarVarVarVar = "mobile";
+
+var valueVarVarVarVarVarVarVarVarVarVar = "maxs@contoso.com";
+
+var keyVarVarVarVarVarVarVarVarVarVar = "manager";
+
+var valueVarVarVarVarVarVarVarVarVarVarVar = "johns";
+
+var keyVarVarVarVarVarVarVarVarVarVarVar = "mailNickname";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVar = "johns@contoso.com";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVar = "mail";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVar = "Finance manager";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVar = "jobTitle";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "John";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "givenName";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute15";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute14";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute13";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute12";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute11";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute10";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute9";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute8";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute7";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 6";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute6";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 5";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute5";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 4";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute4";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 3";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute3";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 2";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute2";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sample 1";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "extensionAttribute1";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "John Smith";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "displayName";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Sales";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "department";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "USA";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "country";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "98052";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "postalCode";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "WA";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "state";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "Redmond";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "city";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "1 Redmond Way";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "streetAddress";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "true";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "accountEnabled";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "false";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "IsSoftDeleted";
+
+var valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "66E4A8CC-1B7B-435E-95F8-F06CEA133828";
+
+var keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar = "objectId";
+
+//create Properties list and populate it
+var properties = new List<Properties>();
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVarVar,valueVarVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVarVar,valueVarVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVarVar,valueVarVarVarVarVar));
+properties.Add(new Properties(keyVarVarVarVar,valueVarVarVarVar));
+properties.Add(new Properties(keyVarVarVar,valueVarVarVar));
+properties.Add(new Properties(keyVarVar,valueVarVar));
+properties.Add(new Properties(keyVar,valueVar));
+properties.Add(new Properties(key,value@odata.type,value));
+
+//create instance of String
+var testInputObject = new String
+{
+	Definition = null,
+	Properties = properties,
+};
+
+await graphClient.ServicePrincipals["{id}"].Synchronization.Jobs["{id}"].Schema
+	.ParseExpression(expression,testInputObject,targetAttributeDefinition)
+	.Request()
+	.PostAsync()
+
+```
