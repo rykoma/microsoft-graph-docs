@@ -46,31 +46,37 @@ The following is an example of the request.
 }-->
 ```http
 PATCH https://graph.microsoft.com/v1.0/groups/{id}/events/{id}
+Prefer: outlook.timezone="Pacific Standard Time"
 Content-type: application/json
-Content-length: 211
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "",
-    "time": "datetime-value"
-  },
-  "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "location":{
+      "displayName":"Conf Room 2"
+  }
 }
 ```
 
 #### Response
 The following is an example of the response.
+>**Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
 
 <!-- {
   "blockType": "response",
-  "truncated": true
+  "truncated": true,
+  "@odata.type": "microsoft.graph.event"
 } -->
 ```http
-HTTP/1.1 204 No Content
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+	"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#groups('7fe8323e-1b24-406c-924c-9d9ccf2bc13d')/events/$entity",
+	"@odata.etag":"W/"P8tzXbof6Eyv1DvnV4lZKgAAAAAOoQ=="",
+	"id":"AQMkADYyYzE3OTI2LWEwYWYtNDUyNy04MzY3LTg1ZjY2AGI5MDc2MWMARgAAA6N59kpn6OZEoMnfCg9P4B8HAD-Lc126H_hMr9Q751eJWSoAAAIBDQAAAD-Lc126H_hMr9Q751eJWSoAAAIU-QAAAA==",
+	"createdDateTime":"2019-04-08T01:50:27.9655729Z",
+	"lastModifiedDateTime":"2019-04-08T02:19:02.8127975Z",
+	"changeKey":"P8tzXbof6Eyv1DvnV4lZKgAAAAAOoQ=="
+}
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
