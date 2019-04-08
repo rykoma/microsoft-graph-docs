@@ -45,19 +45,27 @@ The following is an example of the request.
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/groups/{id}/events
+Prefer: outlook.timezone="Pacific Standard Time"
 Content-type: application/json
-Content-length: 285
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "",
-    "time": "datetime-value"
+  "subject": "Team meeting",
+  "body": {
+    "contentType": "HTML",
+    "content": "Monthly team meeting."
   },
-  "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "start": {
+      "dateTime": "2019-04-09T12:00:00",
+      "timeZone": "Pacific Standard Time"
+  },
+  "end": {
+      "dateTime": "2019-04-09T14:00:00",
+      "timeZone": "Pacific Standard Time"
+  },
+  "location":{
+      "displayName":"Conf Room 1"
+  },
+  "attendees": []
 }
 ```
 In the request body, supply a JSON representation of [event](../resources/event.md) object.
@@ -74,18 +82,14 @@ The following is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 285
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "",
-    "time": "datetime-value"
-  },
-  "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+	"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#groups('7fe8323e-1b24-406c-924c-9d9ccf2bc13d')/events/$entity",
+	"@odata.etag":"W/"P8tzXbof6Eyv1DvnV4lZKgAAAAAOew=="",
+	"id":"AQMkADYyYzE3OTI2LWEwYWYtNDUyNy04MzY3LTg1ZjY2AGI5MDc2MWMARgAAA6N59kpn6OZEoMnfCg9P4B8HAD-Lc126H_hMr9Q751eJWSoAAAIBDQAAAD-Lc126H_hMr9Q751eJWSoAAAIU-QAAAA==",
+	"createdDateTime":"2019-04-08T01:50:27.9655729Z",
+	"lastModifiedDateTime":"2019-04-08T01:50:31.163825Z",
+	"changeKey":"P8tzXbof6Eyv1DvnV4lZKgAAAAAOew=="
 }
 ```
 
